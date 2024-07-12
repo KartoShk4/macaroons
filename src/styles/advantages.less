@@ -1,0 +1,121 @@
+@font-family-gilroyB: GilroyExtraBold, sans-serif;
+@font-family-gilroy: GilroyRegular, sans-serif;
+@font-family-tavolga: Tavolgafree, sans-serif;
+//@color_pink: #eba8b1;
+//@color_red: #821328;
+//@color_white: #ffffff;
+
+
+.advantages {
+  padding: 120px 0 125px 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: 475px 1fr;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+  }
+}
+
+.advantages-title {
+  font-family: @font-family-tavolga;
+  font-size: 45px;
+  line-height: 55px;
+  font-weight: 100;
+  color: #331907;
+  max-width: 475px;
+  padding-bottom: 59px;
+}
+
+.advantages-desc {
+  font-family: @font-family-gilroy;
+  font-size: 18px;
+  line-height: 28px;
+  color: #331907;
+  max-width: 400px;
+}
+
+.advantages-image {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  justify-self: end;
+  align-self: end;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.advantages-list {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 89px;
+  list-style-type: none;
+
+  .advantages-list-item {
+    &:nth-child(1) {
+      max-width: 210px;
+    }
+
+    &:nth-child(2) {
+      max-width: 220px;
+      justify-self: center;
+    }
+
+    &:nth-child(3) {
+      max-width: 202px;
+      justify-self: center;
+    }
+
+    :nth-child(4) {
+      max-width: 218px;
+      justify-self: end;
+    }
+
+  }
+}
+
+.advantages-list-item {
+  &:hover {
+    .circle-number {
+      background-color: @color_almost-pink;
+
+      > span {
+        color: @color_dark_red;
+      }
+    }
+  }
+}
+
+.circle-number {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: @color_dark_red;
+  margin-bottom: 13px;
+  transition: all .3s;
+
+  span {
+    height: 54px;
+    font-family: @font-family-gilroyB;
+    font-size: 60px;
+    color: @color_white;
+  }
+}
+
+.advantages-list-title {
+  font-family: @font-family-gilroyB;
+  font-size: 20px;
+  color: #331907;
+  margin-bottom: 19px;
+}
+
+.advantages-list-desc {
+  font-size: 15px;
+  line-height: 20px;
+  color: #331907;
+}

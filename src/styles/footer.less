@@ -1,0 +1,113 @@
+@font-family-gilroy: GilroyRegular, sans-serif;
+@font-family-gilroyB: GilroyBold, sans-serif;
+
+
+.footer {
+  padding: 73px 0 62px 0;
+  background-color: @color_footer-pink;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.copy {
+  font-family: @font-family-gilroy;
+  font-size: 12px;
+  color: @color_light_pink;
+  padding-top: 19px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 35px;
+  text-decoration: none;
+}
+
+.social-desc {
+  font-family: @font-family-gilroyB;
+  font-size: 16px;
+  color: @color_white;
+  padding-top: 14px;
+  width: 117px;
+}
+
+.copy-adaptive-visible {
+  display: none;
+  font-family: @font-family-gilroy;
+  font-size: 12px;
+  color: @color_light_pink;
+  padding-top: 19px;
+}
+
+.present-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 92px;
+  height: 92px;
+  background: radial-gradient(circle, @color_present_red 0%, @color_light_red 100%);
+  border-radius: 50%;
+  transition: all .4s;
+  z-index: 99;
+
+  &:hover {
+    box-shadow: 0 0 13px 2px @color_dark_red-2;
+
+    & ~ .present-message {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(-10px);
+    }
+  }
+}
+
+.present-image {
+  max-width: 100%;
+}
+
+.present-message {
+  visibility: hidden;
+  opacity: 0;
+  width: 172px;
+  border-radius: 10px;
+  border: 2px solid @color_dark_red-2;
+  display: inline-block;
+  position: fixed;
+  bottom: 30px;
+  right: 130px;
+  z-index: 3;
+  transform: translateY(30px);
+  transition: all .5s;
+
+  &::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-right: 2px solid @color_dark_red-3;
+    border-bottom: 2px solid @color_dark_red-3;
+    position: absolute;
+    top: 19px;
+    right: -10px;
+    background: @color_white-1;
+    transform: rotate(-45deg);
+  }
+}
+
+.message {
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: @color_white-1;
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  color: @color_dark_red-3;
+}
+
